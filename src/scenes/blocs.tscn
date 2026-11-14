@@ -1,3 +1,27 @@
 [gd_scene format=3 uid="uid://ccx1sujp8od15"]
 
+[ext_resource type="Texture2D" uid="uid://dgt8xp4rwenct" path="res://src/sprites/grass.png" id="1_6f4pr"]
+[ext_resource type="Texture2D" uid="uid://dpoc8iw1bjqfi" path="res://src/sprites/dirt.png" id="2_emy0r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yyxtn"]
+texture = ExtResource("1_6f4pr")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxbml"]
+texture = ExtResource("2_emy0r")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
+
+[sub_resource type="TileSet" id="TileSet_xs1x1"]
+tile_size = Vector2i(8, 8)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_yyxtn")
+sources/1 = SubResource("TileSetAtlasSource_pxbml")
+
 [node name="Blocs" type="Node2D" unique_id=1499090885]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=685803130]
+tile_set = SubResource("TileSet_xs1x1")
