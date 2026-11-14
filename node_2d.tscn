@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ct88kecy6qyyr"]
+
+[ext_resource type="PackedScene" uid="uid://cosqdxejqc4ey" path="res://test.tscn" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=104358044]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=551196660]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=51469313]
+
+[node name="Node2D" parent="." unique_id=339686582 instance=ExtResource("1_wtcfe")]
+position = Vector2(152, 127)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=213219215]
