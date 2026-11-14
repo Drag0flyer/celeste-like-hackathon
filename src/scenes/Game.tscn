@@ -1,18 +1,12 @@
 [gd_scene format=3 uid="uid://c8wullj672ajo"]
 
-[ext_resource type="Texture2D" uid="uid://ctpitfxhbflci" path="res://src/sprites/character.png" id="1_mmm3n"]
+[ext_resource type="PackedScene" uid="uid://bkc5xr53i5hpx" path="res://src/scenes/Player.tscn" id="1_mmm3n"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
-size = Vector2(2, 7)
+[node name="Game" type="Node2D" unique_id=2055847030]
 
-[node name="Player" type="CharacterBody2D" unique_id=609650787]
+[node name="Player" parent="." unique_id=609650787 instance=ExtResource("1_mmm3n")]
+position = Vector2(9, -2)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1355689336]
-position = Vector2(0, -4)
-texture = ExtResource("1_mmm3n")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=681695400]
-position = Vector2(0, -3.5)
-shape = SubResource("RectangleShape2D_1vivr")
-
-[node name="Game" type="Node2D" parent="." unique_id=1076688198]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=31615323]
+position = Vector2(9, -2)
+zoom = Vector2(8, 8)
