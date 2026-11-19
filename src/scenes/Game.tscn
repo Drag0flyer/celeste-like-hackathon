@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bkc5xr53i5hpx" path="res://src/scenes/Player.tscn" id="1_mmm3n"]
 [ext_resource type="Texture2D" uid="uid://rnna04b2jv0y" path="res://src/sprites/background.png" id="1_wk23g"]
 [ext_resource type="PackedScene" uid="uid://ccx1sujp8od15" path="res://src/scenes/blocs.tscn" id="3_5bgfh"]
+[ext_resource type="AudioStream" uid="uid://5yo7pr1yig5y" path="res://src/sounds/loopmusic.wav" id="4_5bgfh"]
 
 [node name="Game" type="Node2D" unique_id=2055847030]
 
@@ -22,5 +23,8 @@ texture = ExtResource("1_wk23g")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=31615323]
 zoom = Vector2(1.8, 1.8)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1780350879]
+stream = ExtResource("4_5bgfh")
 
 [editable path="Blocs"]
